@@ -1,5 +1,5 @@
 body{
-	background-color: #F5FAF6;
+	background-color: #FAFFFA;/*#F5FAF6;*/
 	font-family: Optima;
 }
 
@@ -12,6 +12,9 @@ header{
 	width: 105px;
 }
 
+.img-thumbnail {
+  border: 0;
+}
 
 #myname{
 	text-align: right;
