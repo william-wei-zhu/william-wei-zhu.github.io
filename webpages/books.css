@@ -12,19 +12,11 @@ header{
 	width: 105px;
 }
 
-#email{
-	color: black;
-	font-size: 20px;
-}
 
 #myname{
 	text-align: right;
 }
 
-#pdf{
-  padding: 5% 0;
-
-}
 
 
 .social-icons {
@@ -68,11 +60,6 @@ hr {
   margin-right:80px;
 }
 
-
-p{
-	font-size: 23px;
-}
-
 #titleb{
   padding-top: 8%;
   padding-bottom: 5%;
@@ -96,7 +83,7 @@ img{
 .book{
   margin:3% 0;
   height:360px;
-  max-width:860px;
+  max-width:900px;
 
     /*flex-basis: 30%;*/
     display: flex;
@@ -108,7 +95,7 @@ img{
     background:rgb(246, 246, 246);
 }
 .bookpic{
-    flex-basis: 240px;
+    width: 240px;
     background-size: cover;
     background-position: 50% 50%;
 }
@@ -120,14 +107,14 @@ img{
     padding: 0;
 }*/
 .bookinfo{
-   /* flex-basis: 90%;*/
-    padding: 2% 3%;
+    width: 720px;
+    padding: 2% 2%;
 
 }
 .bookinfo .title{
     font-size: 1.6rem;
     line-height: 1.2;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
     color: #5a5a5a;
     font-weight: 600;
 }
@@ -146,8 +133,8 @@ img{
 */
 
 .comment{
-  padding-top: 5%;
-  height: 200px;
+  padding-top: 2%;
+  font-size: 1.3rem;
 }
 
 .book.book2{
