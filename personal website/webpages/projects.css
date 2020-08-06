@@ -1,0 +1,158 @@
+body{
+	background-color: #F5FAF6;
+	font-family: Optima;
+}
+
+header{
+	height: 8%;
+	padding-top: 2%;
+}
+
+#uchicago{
+	width: 105px;
+}
+
+#email{
+	color: black;
+	font-size: 20px;
+}
+
+#myname{
+	text-align: right;
+}
+
+#pdf{
+  padding: 5% 0;
+
+}
+
+
+.social-icons {
+  text-align: right;
+  margin-bottom: 0px;
+  }  
+.social-icons li {
+  display:inline-block;
+  list-style-type:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  }
+.social-icons li a {
+  border-bottom: none;
+  }
+.social-icons li img {
+  width:24px;
+  height:24px;
+  margin-top: 3px;
+  margin-left: 15px;
+  margin-right: 10px;
+}
+
+
+hr {
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+
+.navbar{
+	padding-top: 0px;
+}
+
+
+.navbar-light{
+	font-size: 22px;
+}
+
+.navbar-nav > li{
+  margin-right:80px;
+}
+
+
+p{
+	font-size: 23px;
+}
+
+#titleb{
+  padding-top: 20%;
+  padding-bottom: 5%;
+  text-align: center;
+}
+
+
+
+img{
+  width: 50%;
+}
+
+
+/*.bookontainer{
+  display:flex;
+  flex-direction: row;
+
+}*/
+
+
+.book{
+  margin:3% 0;
+  height:350px;
+  max-width:720px;
+
+    /*flex-basis: 30%;*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* overflow: hidden; */
+   /* margin-bottom: 5%;*/
+    border-radius: 1%;
+    background:rgb(246, 246, 246);
+}
+.bookpic{
+    flex-basis: 240px;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.book img{
+    width: 100%;
+}
+.bookinfo *{
+    margin: 0;
+    padding: 0;
+}
+.bookinfo{
+    flex-basis: 50%;
+    padding: 4% 4%;
+
+}
+.bookinfo .title{
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin-bottom: 5%;
+    color: #5a5a5a;
+    font-weight: 600;
+}
+.bookinfo .author{
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.book{
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+}
+/* controls */
+/*.bookinfo{
+    position: relative;
+}
+*/
+
+.comment{
+  padding-top: 10%;
+}
+
+.book.book2{
+  margin-left: auto;
+  margin-right: 0;
+}
+
+
+
