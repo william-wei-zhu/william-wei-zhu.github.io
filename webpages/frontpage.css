@@ -12,10 +12,6 @@ header{
 	width: 105px;
 }
 
-#email{
-	color: black;
-	font-size: 20px;
-}
 
 #myname{
 	text-align: right;
@@ -66,7 +62,7 @@ hr {
 
 
 p{
-	font-size: 23px;
+	font-size: 1.4rem;
 }
 
 .intro{
