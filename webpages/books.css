@@ -18,7 +18,6 @@ header{
 }
 
 
-
 .social-icons {
   text-align: right;
   margin-bottom: 0px;
@@ -61,8 +60,8 @@ hr {
 }
 
 #titleb{
-  padding-top: 8%;
-  padding-bottom: 5%;
+  padding-top: 6%;
+  padding-bottom: 3%;
   text-align: center;
 }
 
@@ -71,7 +70,6 @@ hr {
 img{
   width: 50%;
 }
-
 
 /*.bookontainer{
   display:flex;
