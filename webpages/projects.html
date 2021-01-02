@@ -63,7 +63,7 @@
 
   <h1 id="titleb">Here are a few of my projects:</h1>
   
-  <div class="col-lg-12">
+  <div class="col-lg-12" id='CEO'>
     <div class="book">
       <img src="../img/projects/CEO.png">
       
@@ -92,38 +92,67 @@
     </div><!--book end-->
 </div> <!-- column ends -->
   
-    <div class="row">
-      <div class="col-lg-12">
+
+
+      <div class="col-lg-12" id='attrition'>
           <div class="book">
-            <img src="../img/projects/obama.png">
+            <img src="../img/projects/employee_att.png">
             <div class="bookinfo">
-              <p class="title"> Speaker Recognition System
+              <p class="title"> Predicting Employee Attrition
               </p>
-              <div class="author"><a href="https://github.com/william-zhu-3541/Speaker-recog-markov" target="_blank">[Python Code]
+              <div class="author"><a href="https://github.com/william-zhu-3541/employee_attrition" target="_blank">[Python Code]
               </a></div>
               <p class="comment">
-                As my final project for the Python Programming Course at UChicago, I built a speech recognition
-                program using Markov models. Given 3 text files (Obama_speech.txt, Romney_speech.txt, 
-                unknown_speech.txt, for example), the speech recognition program is able to predict whether the
-                first or the second speaker is more likely to be the author of the unknown speech.</p>
+                In this Kaggle project, my goal is to predict employee attrition on IBM HR Analytics dataset 
+                (1470 rows, 79 variables). I employed several classification methods including logistic regression, 
+                Naïve Bayes, Decision Tree, K-nearest neighbors, Random Forest, Radial Support Vector Machines. 
+                I also experimented with several ensemble methods including Voting Classifier, Bagged Decision Tree,
+                Adaptive Boosting, Gradient Boosting, and XGBoost. </p>
 
-                <p class="comment">
-                While developing the program, I experimented with both hashtables and dictionary as data structures to
-                store the trained Markov models. The following graph shows the relative performance
-                of the two data structures.
+                <p class="comment"> 
+                The following graph shows the relative prediction performance of these methods. XGBoost achieves the
+                highest score of 0.876. In feature importance analysis, I found that income, whether work overtime,
+                stock option level, and levels of environment satisfaction are the most important factors associated
+                with employee attrition.
               </p>
-              <img src="../img/projects/execution_graph.png">
 
-  
-  
-        
+              <img id="att" src="../img/projects/plot_ibm.png">
+
+
             </div><!--bookinfo ends-->
   
           </div><!--book end-->
-      </div>
+      </div> <!-- column ends -->
+  
+
+        <div class="col-lg-12" id='speaker'>
+            <div class="book">
+              <img src="../img/projects/obama.png">
+              <div class="bookinfo">
+                <p class="title"> Speaker Recognition System
+                </p>
+                <div class="author"><a href="https://github.com/william-zhu-3541/Speaker-recog-markov" target="_blank">[Python Code]
+                </a></div>
+                <p class="comment">
+                  As my final project for the Python Programming Course at UChicago, I built a speech recognition
+                  program using Markov models. Given 3 text files (Obama_speech.txt, Romney_speech.txt, 
+                  unknown_speech.txt, for example), the speech recognition program is able to predict whether the
+                  first or the second speaker is more likely to be the author of the unknown speech.</p>
+  
+                  <p class="comment">
+                  While developing the program, I experimented with both hashtables and dictionary as data structures to
+                  store the trained Markov models. The following graph shows the relative performance
+                  of the two data structures.
+                </p>
+                <img src="../img/projects/execution_graph.png">
   
   
-      <div class="col-lg-12">
+              </div><!--bookinfo ends-->
+    
+            </div><!--book end-->
+        </div> <!-- column ends -->
+  
+      <div class="col-lg-12" id = 'blackjack'>
           <div class="book">
             <img src="../img/projects/blackjack.png">
             
