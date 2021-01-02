@@ -135,7 +135,7 @@ img{
     text-align: center;
 }
 
-.bookinfo img{
+.bookinfo #ds{
   width: 60%;
   margin-left: 20%;
 }
