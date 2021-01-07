@@ -135,12 +135,12 @@ img{
     text-align: center;
 }
 
-.bookinfo #ds{
+.bookinfo #small{
   width: 60%;
   margin-left: 20%;
 }
 
-.bookinfo #att{
+.bookinfo #full{
   width: 100%;
   margin-left: 0%;
 }
