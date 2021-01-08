@@ -76,47 +76,88 @@
 
 <div class="col-lg-12" id='office'>
   <div class="book">
-    <img src="../img/projects/the_office/the_office.jpg">
+    <img src="../img/projects/the_office/sunday_office.png">
     <div class="bookinfo">
       <p class="title2"> Introduction
       </p>
       <p class="comment">
         Recently, I found <a href="https://www.kaggle.com/nasirkhalid24/the-office-us-complete-dialoguetranscript" target="_blank">The Office (US) transcript dataset
         </a> from Kaggle, which enables me to explore the network
-      relationship among The Office characters throughout the 9 seasons.
+      relationship among The Office characters throughout the 9 seasons. 
+      The Office script contains 8157 scenes across 201 episodes and 9 seasons. The following
+      table shows the episode and scene distribution by season.
       </p>
-<!-- 
-      <table class="table">
+
+      <table class="table col-lg-12">
         <thead>
           <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Season</th>
+            <th scope="col">1</th>
+            <th scope="col">2</th>
+            <th scope="col">3</th>
+            <th scope="col">4</th>
+            <th scope="col">5</th>
+            <th scope="col">6</th>
+            <th scope="col">7</th>
+            <th scope="col">8</th>
+            <th scope="col">9</th>
+            <th scope="col">Total</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <th scope="row">Total Episodes</th>
+            <td>6</td>
+            <td>22</td>
+            <td>25</td>
+            <td>19</td>
+            <td>28</td>
+            <td>26</td>
+            <td>26</td>
+            <td>24</td>
+            <td>25</td>
+            <td>201</td>
+            
           </tr>
           <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
+            <th scope="row">Total Scenes</th>
+            <td>227</td>
+            <td>991</td>
+            <td>1115</td>
+            <td>726</td>
+            <td>1031</td>
+            <td>1022</td>
+            <td>1012</td>
+            <td>929</td>
+            <td>1104</td>
+            <td>8157</td>
+            
           </tr>
         </tbody>
-      </table> -->
+      </table>
     
+      <p class="comment">Figure 1 and 2 show the top 10 characters with the 
+        most lines and scenes. (A character can have multiple lines in each scene).
+        Among The Office characters, 40 characters have more than 10 scenes.
+        30 characters have more than 50 scenes, and 18 characters have more than 200 scenes.
+      </p>
+      
+      <img id="small" src="../img/projects/the_office/lines.png">
+      <img id="small" src="../img/projects/the_office/scenes.png">
+
+      <p class="comment">Figure 3 shows the top 10 characters with the 
+        most monologue scenes (scenes with only one character). Like those in Figure 1 and 2,
+        the top five spots in Figure 3 are Michael, Dwight, Jim, Pam, and Andy. 
+        Figure 4 shows the top 10 character pairs with the most number of shared scenes.
+        The relationships among Jim, Pam, Michael, and Dwight take the top 6 spots.
+        
+      </p>
+
+      <img id="small2" src="../img/projects/the_office/monologues.png">
+      <img id="small3" src="../img/projects/the_office/pairs.png">
+      
+
+
 
   <p class="title">Character Network by Season</p>
   <p>The following graphs show character network by season.
@@ -127,11 +168,16 @@
     </a> which means that characters who have more shared scenes with other characters (greater centrality) are more likely to appear
     at the center of the graph. Monologue scenes were excluded during the making the network graphs.</p>
     <p>Each of the following tabs of the 9 seasons contains two graphs (except for Season 1 and 4). 
-      The first graph shows characters that appear in at least
-      10 non-monologue scenes. For most seasons, including peripheral characters in the graph causes the core characters to cram together at the center.
-      Therefore, the second graph only shows characters with at least 40 non-monologue scenes, so that we can get a better sense of
+      The first graph shows characters with at least
+      10 scene interactions.
+      For most seasons, having peripheral characters in the graph causes the core characters to cram together at the center.
+      Therefore, the second graph shows only characters with at least 40 scene interactions, so that we can get a better sense of
       the relationship among the core characters. "All Seasons" tab contains 3 graphs to help viewers zoom in from periphery to the central characters.
     </p>
+
+    <p class="note">Note:  A character's total number of "scene interactions" is the sum of the number of other characters
+      in every scene that the character appears in. For character A, interacting with character B in two separate scenes
+      counts as two scene interactions.</p>
 
 
 
@@ -176,12 +222,12 @@
       <p>
         <ul>
           <li>Jim-Dwight-Pam-Michael relationship forms the center of graph.</li>
-          <li>Dwight and Jim has more scenes together than any other character pairs.</li>
+          <li>Dwight and Jim has more scene together than any other character pairs.</li>
           <li>The Angela-Oscar-Kevin triangle forms the accounting department.</li>
           <li>The Pam-Angela-Phyllis triangel forms the party planning committee.</li>
           <li>Creed does not have a single line in scenes of Season 1.</li>
-          <li>Kelly only has 3 scenes, and none with Ryan.</li>
-          <li>Roy has more scenes with Jim than with Pam.</li>
+          <li>Kelly only has 3 scene interactions, and none with Ryan.</li>
+          <li>Roy has more scene interactions with Jim than with Pam.</li>
         </ul>
       </p>
     </div>
