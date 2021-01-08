@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>The Office Network</title>
+	<title>Network Visualization of The Office</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="the_office.css">
   <link rel="icon" href="../img/pp.png" type="image/icon">
@@ -67,7 +67,7 @@
 <div class="container">
 
   <div class="titleb">
-  <h1>Network of The Office (US) Characters </h1>
+  <h1>Network Visualization of The Office (US) Characters </h1>
   <h3><a href="https://github.com/william-wei-zhu/the_office" target="_blank">[Python Code]
   </a>
 </h2>
@@ -82,10 +82,10 @@
       </p>
       <p class="comment">
         Recently, I found <a href="https://www.kaggle.com/nasirkhalid24/the-office-us-complete-dialoguetranscript" target="_blank">The Office (US) transcript dataset
-        </a> from Kaggle, which gave me an opportunity to explore the network
-      relationship among The Office characters through the 9 seasons.
+        </a> from Kaggle, which enables me to explore the network
+      relationship among The Office characters throughout the 9 seasons.
       </p>
-
+<!-- 
       <table class="table">
         <thead>
           <tr>
@@ -115,7 +115,7 @@
             <td>@twitter</td>
           </tr>
         </tbody>
-      </table>
+      </table> -->
     
 
   <p class="title">Character Network by Season</p>
@@ -128,7 +128,7 @@
     at the center of the graph. Monologue scenes were excluded during the making the network graphs.</p>
     <p>Each of the following tabs of the 9 seasons contains two graphs (except for Season 1 and 4). 
       The first graph shows characters that appear in at least
-      10 non-monologue scenes. For most seasons, including peripheral characters causes the core characters to cram together in the center.
+      10 non-monologue scenes. For most seasons, including peripheral characters in the graph causes the core characters to cram together at the center.
       Therefore, the second graph only shows characters with at least 40 non-monologue scenes, so that we can get a better sense of
       the relationship among the core characters. "All Seasons" tab contains 3 graphs to help viewers zoom in from periphery to the central characters.
     </p>
@@ -175,10 +175,13 @@
       <h2 class='observations'>Observations from Season 1 Graphs</h2>
       <p>
         <ul>
-          <li>Jim-Dwight-Pam-Michael are at the center of graph.</li>
+          <li>Jim-Dwight-Pam-Michael relationship forms the center of graph.</li>
+          <li>Dwight and Jim has more scenes together than any other character pairs.</li>
           <li>The Angela-Oscar-Kevin triangle forms the accounting department.</li>
+          <li>The Pam-Angela-Phyllis triangel forms the party planning committee.</li>
           <li>Creed does not have a single line in scenes of Season 1.</li>
-          <li>Kelly only has 3 scenes in Season 1.</li>
+          <li>Kelly only has 3 scenes, and none with Ryan.</li>
+          <li>Roy has more scenes with Jim than with Pam.</li>
         </ul>
       </p>
     </div>
@@ -189,9 +192,8 @@
       <h2 class='observations'>Observations from Season 2 Graphs</h2>
       <p>
         <ul>
-          <li>Coffee</li>
-          <li>Tea</li>
-          <li>Milk</li>
+          <li>Dwight and Michael has more scenes together than any other character pairs.</li>
+          <li>Creed becomes a recurring character.</li>
         </ul>
       </p>
     </div>
@@ -202,9 +204,13 @@
       <h2 class='observations'>Observations from Season 3 Graphs</h2>
       <p>
         <ul>
-          <li>Coffee</li>
-          <li>Tea</li>
-          <li>Milk</li>
+          <li>Jim moves away from the center of the graph because of his transfer to Stamford
+            during the early part of the season. Jim has more scenes with Karen than with Pam.
+          </li>
+          <li>The Dwight-Michael relationship carries this season, especially during "The Coup"
+            and "The Return" episodes.
+          </li>
+          <li>Andy and Karen are introduced in this season as recurring characters.</li>
         </ul>
       </p>
     </div>
@@ -214,9 +220,13 @@
       <h2 class='observations'>Observations from Season 4 Graphs</h2>
       <p>
         <ul>
-          <li>Coffee</li>
-          <li>Tea</li>
-          <li>Milk</li>
+          <li>Ryan moves toward the periphery of the graph because of his corporate promotion.</li>
+          <li>Despite only appearring at the last episode of the season, Holly appears on the 
+            network graph because her role was very important in the last episode.
+          </li>
+          <li>Dwight moves away from the center of the graph. Though he share plenty of scences
+            with Jim, Pam, Angela, and Michael, he does not have many shared scenes with other characters.
+          </li>
         </ul>
       </p>
     </div>
@@ -227,9 +237,9 @@
       <h2 class='observations'>Observations from Season 5 Graphs</h2>
       <p>
         <ul>
-          <li>Coffee</li>
-          <li>Tea</li>
-          <li>Milk</li>
+          <li>Erin is introduced in this season as a recurring character.</li>
+          <li>To Michael's horror, Toby is back.</li>
+          <li>This is Jan's last season as a recurring character.</li>
         </ul>
       </p>
     </div>
@@ -240,9 +250,12 @@
       <h2 class='observations'>Observations from Season 6 Graphs</h2>
       <p>
         <ul>
-          <li>Coffee</li>
-          <li>Tea</li>
-          <li>Milk</li>
+          <li>In the first 5 seasons, audience becomes very familiar with the relationships
+            among the core characters. As a result, Seasons 6 to 9 invest in more time to explore
+            the greater Scranton universe by introducing new periphery characters.
+            Consequently, the central characters are increasingly cramed to the center of the graphs.
+          </li>
+          <li>Gabe and Jo are introduced in this season due to Sabre buyout.</li>
         </ul>
       </p>
     </div>
@@ -253,9 +266,8 @@
       <h2 class='observations'>Observations from Season 7 Graphs</h2>
       <p>
         <ul>
-          <li>Coffee</li>
-          <li>Tea</li>
-          <li>Milk</li>
+          <li>This is Michael's last season in the Office.</li>
+          <li>Andy becomes an increasingly important character to the show.</li>
         </ul>
       </p>
     </div>
@@ -266,9 +278,9 @@
       <h2 class='observations'>Observations from Season 8 Graphs</h2>
       <p>
         <ul>
-          <li>Coffee</li>
-          <li>Tea</li>
-          <li>Milk</li>
+          <li>After Michael's departure, Jim-Andy-Dwight triangle shoulders the burden to
+            connect characters in this season. Andy moves to the center as the new regional manager.
+          </li>
         </ul>
       </p>
     </div>
@@ -279,9 +291,9 @@
       <h2 class='observations'>Observations from Season 9 Graphs</h2>
       <p>
         <ul>
-          <li>Coffee</li>
-          <li>Tea</li>
-          <li>Milk</li>
+          <li>Dwight moves toward the center of the graph as he (finally) becomes
+            the new regional manager of the Scranton branch.
+          </li>
         </ul>
       </p>
     </div>
@@ -293,9 +305,10 @@
       <h2 class='observations'>Observations from All Seasons Graphs</h2>
       <p>
         <ul>
-          <li>Coffee</li>
-          <li>Tea</li>
-          <li>Milk</li>
+          <li>Jim-Dwight-Pam-Michael relationship forms the center of graph.</li>
+          <li>Had Michael stayed for the last two seasons, he would have moved to the 
+            dead center of the graph.
+          </li>
         </ul>
       </p>
     </div>
@@ -306,7 +319,7 @@
   <p>This project is still a work in progress. The next step is to engage in text analysis of the lines
     in The Office script.
     If you have new observations about the network
-    graphs or suggestions for directions of further analysis, please <a href="mailto: wzhu4@uchicago.edu" target="_blank"> email me</a>. 
+    graphs or suggestions for directions of further visualization and analysis, please <a href="mailto: wzhu4@uchicago.edu" target="_blank"> email me</a>. 
     Leave your preferred name in the email if you'd like me to credit you for new updates.</p>
 
   <h3 class="titleb"> 
