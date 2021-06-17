@@ -67,6 +67,47 @@
 <div class="container">
 
   <h1 id="titleb">Here are a few of my projects:</h1>
+
+  <div class="col-lg-12" id='divvy'>
+    <div class="book">
+      <img src="../img/projects/divvy_cover.png">
+      <div class="bookinfo">
+        <p class="title"> Exploring Variations in Divvy Bike Stations' Usage Volumes</p>
+        <div class="author"><a href="divvy.html">[Blog post]</a>
+      </div>
+        <p class="comment">
+          Launched in 2013, <a href="https://www.divvybikes.com/" target="_blank">Divvy bikes</a> 
+          is the largest public bike sharing service in Chicago. In April 2021, the most popular
+          divvy bike station, Lake Shore Dr & Monroe St, was used for over 7 thousand times (for check-in
+          and check-out). Meanwhile,
+          three stations were only used once in the same month. 
+          What factors contribute to the variations in usage volume among divvy bike stations?
+          This project compiled a station-level dataset 
+          from databases including
+          <a href="https://www.divvybikes.com/system-data" target="_blank">Divvy historical trip records (April 2021)</a>, 
+          <a href="https://data.cityofchicago.org" target="_blank">the City of Chicago Data Portal</a>,
+          <a href="https://www.census.gov/programs-surveys/decennial-census/data/datasets.html" target="_blank">US Census (2010)</a>, and
+          <a href="https://www.zillow.com/research/data/" target="_blank">Zillow Research</a>
+          to test six groups of hypotheses. Results show interesting associations between the usage volume of divvy bike 
+          stations and factors including network effects, crime rates, socio-economic status, 
+          and demography.</p>
+
+          <p class="comment">
+          For more information, check out <a href="divvy.html">the blog post</a>.
+          </p>
+        <p class="author">Network graph of Chicago Divvy bike stations and trips (April 2021)</p>
+        <img id="full" src="../img/projects/divvy/f1.png">
+  
+  
+      </div><!--bookinfo ends-->
+  
+    </div><!--book end-->
+  </div> <!-- column ends -->
+
+
+
+
+
   
   <div class="col-lg-12" id='CEO'>
     <div class="book">
@@ -121,25 +162,24 @@
     <div class="bookinfo">
       <p class="title"> Network Visualization of The Office (US) Characters
       </p>
-      <div class="author"><a href="https://github.com/william-wei-zhu/the_office" target="_blank">[Python Code]</a> 
-      <a href="the_office.html">[Read More]</a>
-    
+      <div class="author"> 
+      <a href="the_office.html">[Blog post]</a>
     </div>
       <p class="comment">
         Recently, I found <a href="https://www.kaggle.com/nasirkhalid24/the-office-us-complete-dialoguetranscript" target="_blank">The Office (US) transcript dataset
         </a> from Kaggle, which enables to explore the network
-      relationships among The Office characters throughout the 9 seasons.
+        relationships among The Office characters throughout the 9 seasons.
         The following graph shows the network of The Office characters with at least 500 scene interactions.
         Each point (node) represents a character.
-    Each line (edge) between two nodes indicates that the two characters have appeared in the same scene. 
-    The width of the edge presents the number of scenes that the two characters share.
-    The graph applies <a href="https://en.wikipedia.org/wiki/Force-directed_graph_drawing" target="_blank">force-directed graph drawing,
-    </a> which means that characters who have more shared scenes with various other characters (greater centrality) are more likely to appear
-    at the center of the graph.</p>
-    
+        Each line (edge) between two nodes indicates that the two characters have appeared in the same scene. 
+        The width of the edge presents the number of scenes that the two characters share.
+        The graph applies <a href="https://en.wikipedia.org/wiki/Force-directed_graph_drawing" target="_blank">force-directed graph drawing,
+        </a> which means that characters who have more shared scenes with various other characters (greater centrality) are more likely to appear
+        at the center of the graph.</p>
+        
         <p class="comment">
         For more information and season breakdown, 
-        <a href="the_office.html"> click this page</a>.
+        check out <a href="the_office.html">the blog post</a>.
       </p>
 
       <img id="full" src="../img/projects/the_office/all-c.png">
