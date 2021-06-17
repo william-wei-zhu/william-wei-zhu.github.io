@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Network Visualization of The Office</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="divvy.css">
+  <link rel="icon" href="../img/pp.png" type="image/icon">
+
+</head>
+</head>
+<body>
+
+<header class="masthead container">
+	<div class="row">
+		<div class="col-lg-3 col-md-2 col-sm-2">
+			<img src="../img/uchicago.png" alt="logo" id="uchicago">
+		</div>
+		<div class="col-lg-9" id="myname">
+			<h1>William Zhu</h1>
+			<h4>Candidate for Master in Computational Social Science <br>(The University of Chicago)</h4>
+
+			<ul class="social-icons">
+        <li><a href="https://scholar.google.com/citations?user=Koha6gwAAAAJ&hl=en&oi=sra" target="_blank"><img src='../img/gscholar.svg' /></a></li>
+        <li><a href="https://www.goodreads.com/user/show/23036975-william" target="_blank"><img src='../img/goodreads.png' /></a></li>
+        <li><a href="https://github.com/william-wei-zhu" target="_blank"><img src='../img/github.png' /></a></li>
+        <li><a href="https://www.youtube.com/channel/UCfMZjG2MKviY-Y70d6SRx9w" target="_blank"><img src='../img/youtube.png' /></a></li>
+        <li><a href="http://www.linkedin.com/in/william-wei-zhu" target="_blank"><img src='../img/linkedin.svg' /></a></li>
+        <li><a href="mailto: wzhu4@uchicago.edu" target="_blank"><img src='../img/mail.png' /></a></li>
+</ul>
+
+		</div>
+		</div>
+		<hr>
+</header>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed">
+<div class="container">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="../index.html">About Me </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="projects.html">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="papers.html">Papers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="resume.html">Resume</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="books.html">Favorite Books</a>
+      </li>
+      
+    </ul>
+
+  </div>
+</nav>
+
+
+
+
+<div class="container">
+
+  <div class="titleb">
+  <h1>Exploring Variations in Divvy Bike Stations' Usage Volumes</h1>
+  <h3><a href="https://github.com/william-wei-zhu/the_office" target="_blank">[Data and Code]
+  </a>
+</h2>
+</div>
+  
+
+<div class="col-lg-12" id='office'>
+  <div class="book">
+    <!-- change youtube video -->
+    <div class="h_iframe">
+    <iframe src="https://www.youtube.com/embed/gt4VIpvhYtE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    
+    <div class="bookinfo">
+      <p class="title2"> Introduction
+      </p>
+      <p class="comment">
+        <a href="https://www.divvybikes.com/" target="_blank">Divvy bikes</a> 
+        is a public bike sharing service in Chicago operated by Lyft for the Chicago
+        Department of Transportation. 
+        Launched in 2013, Divvy bike share currently has 681 bike stations and 
+        about 337 thousand monthly riderships (as in April 2021). Riders can 
+        process bike rental in two ways: casual riders can rent out divvy bikes 
+        from stations using a one-time check-out system installed in the station. 
+        Members can rent out divvy bikes by scanning the QR code on each bike 
+        from their Lyft app on their phone.
+      </p>
+
+      <!-- Figure 1, network graph -->
+      <p class="author">Figure 1: network graph of Chicago Divvy bike stations and trips (April 2021)</p>
+      <img id="full" src="../img/projects/divvy/f1.png">
+
+      <p class="comment">
+        Figure 1 shows the network graph of Divvy bike trips. 
+        Each node represents a bike station, and the width of 
+        every undirected edge between two nodes represents the 
+        number of trips from one station to the other. We can clearly 
+        see that bike stations vary widely by usage volume. 
+        <strong>In this project, the usage volume of a divvy bike station is 
+        defined as the sum between the number of station-to-station 
+        divvy bike trips in April 2021 that started at the station 
+        and those that ended at the station.</strong> Stations in downtown 
+        and the northside of Chicago are more popular than those in other areas. 
+        Though stations are well distributed at the westside and southside 
+        of Chicago, Hyde Park is the only neighborhood in the southside of 
+        Chicago with high Divvy bike usage volume in April 2021.
+      </p>
+
+      <!-- Figure 2, histogram -->
+      <p class="author">Figure 2: distribution of divvy bike stations by usage volume (April 2021)</p>
+      <img id="full" src="../img/projects/divvy/f2.png">
+
+      <p class="comment">
+        Figure 2 shows the distribution of divvy bike stations by usage volume, 
+        which ranges quite widely. Some stations were used only once in April 2021, 
+        while the most popular station was used 7109 times. <strong>What factors affect 
+        the variations in usage volume among divvy bike stations?</strong>
+      </p>
+
+      <p class="comment">
+        To answer this question, this project formulates 6 groups of hypotheses on factors 
+        that may potentially affect usage volume of divvy bike stations. 
+        To test these hypotheses, the project compiled a station-level dataset 
+        from a wide range of databases, including 
+        <a href="https://www.divvybikes.com/system-data" target="_blank">Divvy historical trip records (April 2021)</a>, 
+        <a href="https://data.cityofchicago.org" target="_blank">the City of Chicago Data Portal</a>,
+        <a href="https://www.census.gov/programs-surveys/decennial-census/data/datasets.html" target="_blank">US Census (2010)</a>, and
+        <a href="https://www.zillow.com/research/data/" target="_blank">Zillow Research</a>. 
+        The result shows interesting associations between the usage volume of bike 
+        stations and factors including network effects, crime, socio-economic status, 
+        and demography. The following post is composed of three sections:
+        <ul class="comment">
+          <li>Section one provides a brief descriptive overview of Divvy historic trip data (April 2021), 
+            which is the primary dataset for this project. </li>
+          <li>Section two introduces six groups of hypotheses and describes how relevant independent 
+            variables are collected and measured. </li>
+          <li>Section three discusses the results of hypothesis testing using multivariate OLS regression models.</li>
+        </ul>
+      </p>
+
+      <p class="title2">Overview of Divvy historic trip data (April 2021)
+        </p>
+
+        <p class="comment"><a href="https://www.divvybikes.com/system-data" target="_blank">The Divvy historical trip data</a> 
+          stores information on every divvy 
+          bike trip since 2013, including start and end station names, coordinates, and 
+          time stamps. The April 2021 Divvy historic trip dataset records 337,230 trips in total, among 
+          which 298,207 trips were from station to station. </p>
+
+
+          <!-- Figure 3  -->
+          <p class="author">Figure 3: distribution of station-to-station divvy bike trip by date (April 2021)</p>
+          <img id="full" src="../img/projects/divvy/f3.png">
+          <!-- Figure 4  -->
+          <p class="author">Figure 4: distribution of station-to-station divvy bike trip by hours of the day (April 2021)</p>
+          <img id="full" src="../img/projects/divvy/f4.png">
+
+        <p class="comment">Figure 3 shows the distribution of Divvy bike trips by date in April. 
+          We can see that the number of bike trips spiked during weekends 
+          (highlighted in red boxes) and decreased on rainy days (highlighted in blue 
+          boxes). Figure 4 shows the breakdown of bike trips by the hours of the day. 
+          It is clear that Divvy bike usage peaked during the afternoon hours 
+          (3pm to 7pm). In April 2021, 681 Divvy bike stations were used (to check 
+          out or return a bike) at least once. Figure 5 shows the top 10 most 
+          used Divvy Bike stations in April. As expected, all of them are located 
+          in the downtown area and close to the lakeshore. </p>
+
+          <!-- Figure 5  -->
+          <p class="author">Figure 5: top 10 divvy bike stations with the highest usage volume (April 2021)</p>
+          <img id="full" src="../img/projects/divvy/f5.png">
+
+
+
+
+  <p class="title2">Introducing the six groups of hypotheses</p>
+
+  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-s1-tab" data-toggle="pill" href="#pills-s1" role="tab" aria-controls="pills-s1" aria-selected="true">Location and purpose</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-s2-tab" data-toggle="pill" href="#pills-s2" role="tab" aria-controls="pills-s2" aria-selected="false">Crime rates</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-s3-tab" data-toggle="pill" href="#pills-s3" role="tab" aria-controls="pills-s3" aria-selected="false">Local supply and demand</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-s4-tab" data-toggle="pill" href="#pills-s4" role="tab" aria-controls="pills-s4" aria-selected="false">Public transportations</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-s5-tab" data-toggle="pill" href="#pills-s5" role="tab" aria-controls="pills-s5" aria-selected="false">Socio-economic status</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-s6-tab" data-toggle="pill" href="#pills-s6" role="tab" aria-controls="pills-s6" aria-selected="false">Demographics</a>
+    </li>
+  </ul>
+
+
+  <div class="tab-content comment" id="pills-tabContent">
+    <div class="tab-pane show fade active" id="pills-s1" role="tabpanel" aria-labelledby="pills-s1-tab">
+      <h2 class='observations'>Hypotheses Group 1: location and purpose</h2>
+      <p class="comment">It is likely that bike stations in certain locations mainly serve users 
+        with a particular purpose. For example, bike stations located near tourist 
+        attractions are mainly used for sightseeing. Stations along a long bike 
+        trail are used for exercising. Stations in residential areas are used for 
+        commuting. These locations and user objectives may impact the volume of 
+        station usage. Tourist sites are likely to attract more bike traffic than 
+        residential areas or long bike trails. Here are the hypotheses:
+        <ul class="comment">
+          <li>H1a: Stations with a high proportion of riders who pay one-time fees, 
+            which signal proximity to tourist sites, are positively associated with 
+            usage volume. </li>
+          <li>H1b: Stations with high average trip distances, which signal proximity 
+            to long bike trails, are associated with low usage volume.  </li>
+          <li>H1c: Stations with a high proportion of morning or weekday usage, 
+            which signal proximity to residential areas, are negatively associated 
+            with usage volume.</li>
+        </ul>
+      </p>
+
+      <!-- Table P1  -->
+      <div class="table-responsive">
+        <p class="author">Table P1: variables for Group 1 hypotheses</p>
+        <table class="table col-lg-12">
+          <thead>
+            <tr>
+              <th scope="col">Variables</th>
+              <th scope="col">Meaning</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">total_count</th>
+              <td>usage volume (the sum between the number of station-to-station 
+                divvy bike trips in April 2021 that started at the station and 
+                those that ended at the station) </td>
+              
+            </tr>
+            <tr>
+              <th scope="row">casual_p</th>
+              <td>the proportion of trips in the station's usage volume that are paid 
+                via one-time check-out system</td>
+            </tr>
+            <tr>
+              <th scope="row">average_distance</th>
+              <td>the average Euclidean distance (in decimal degrees) between the 
+                start station coordinates and end station coordinates of 
+                trips in the station's usage volume</td>
+            </tr>
+            <tr>
+              <th scope="row">weekday_p</th>
+              <td>percentage of trips in the station's usage volume that took place 
+                during the weekdays</td>
+            </tr>
+            <tr>
+              <th scope="row">morning_p</th>
+              <td>the proportion of trips in the station's usage volume with a start time recorded 
+                in the morning (6am to noon)</td>
+            </tr>
+            <tr>
+              <th scope="row">evening_p</th>
+              <td>the proportion of trips in the station's usage volume with a start time recorded 
+                in the evening (9pm to 5:59am)
+              </td>
+            </tr>
+          </tbody>    
+        </table>
+        <p class="comment"> <strong>Data source:</strong> 
+          <a href="https://www.divvybikes.com/system-data" target="_blank">Divvy historical trip data (April 2021)</a></p>
+      </div>
+
+
+      <p class="comment">
+        Table P1 lists the variables collected to test these hypotheses. 
+        In the station-level dataset compiled from 
+        <a href="https://www.divvybikes.com/system-data" target="_blank">Divvy historical trip data</a>, 
+        every row represents a unique divvy bike station that was used at least 
+        once in station-to-station trips in April 2021. ‘Total_count’ is the outcome 
+        variable, which measures a station’s usage volume. Predictor variables include 
+        payment process (‘casual_p’), distance (‘average_distance’) and usage time 
+        period (‘weekday_p’, ‘morning_p’, ‘evening_p’). Figure P1 shows the distribution 
+        of stations by these variables.
+      </p>
+      <!-- Figure P1  -->
+      <p class="author">Figure P1: histograms of variables in Group 1 hypotheses</p>
+        <img id="full" src="../img/projects/divvy/p1.png">
+    </div> <!-- H1 ends -->
+
+
+
+    <div class="tab-pane fade" id="pills-s2" role="tabpanel" aria-labelledby="pills-s2-tab">
+      <h2 class='observations'>Hypotheses Group 2: crime rates</h2>
+      <!-- Figure P2a  -->
+      <p class="comment">It is likely that bike stations located in places with high crime 
+        rates were used less frequently than those in low crime rate areas. 
+        The project collected 
+        <a href="https://data.cityofchicago.org/Public-Safety/Crimes-2020/qzdf-xmn8" target="_blank">the Chicago Crime record data in 2020</a> 
+        from the City of 
+        Chicago data portal. Figure P2a shows the top 10 crime categories by the number 
+        of cases in Chicago (2020).  Notice that except for ‘deceptive practice’, the 
+        other nine categories all involve physical violence that mostly took place in 
+        public streets. In contrast, deceptive practices, which include identity theft 
+        and financial fraud, represent white collar crimes that mostly take place in 
+        downtown office buildings. Therefore, I separately measure the number of these 
+        two types of crime in 2020 that were committed in locations near each bike 
+        station. I hypothesize that:
+        <ul class="comment">
+          <li>H2a: Bike stations with high numbers of physical crime nearby are 
+            negatively associated with the volume of usage. </li>
+          <li>H2b: bike stations with high numbers of white collar crime nearby 
+            are positively associated with the volume of usage. </li>
+        </ul>
+      </p>
+
+      <p class="comment">
+        Table P2 lists the two variables collected to test the hypothesis. 
+        Figure P2 shows the distribution of stations by the two types of crime.
+      </p>
+
+      <!-- Table P2  -->
+      <div class="table-responsive">
+        <p class="author"> Table P2: variables for Group 2 hypotheses</p>
+        <table class="table col-lg-12">
+          <thead>
+            <tr>
+              <th scope="col">Variables</th>
+              <th scope="col">Meaning</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">num_phys_crime</th>
+              <td>the number of crime cases (excluding ‘deceptive practice’) 
+                within 0.004 degrees (444m) in longitude and latitude of the 
+                station (in April 2020)</td>        
+            </tr>
+            <tr>
+              <th scope="row">num_wc_crime</th>
+              <td>the number of ‘deceptive practice’ crime cases within 0.004 
+                degrees (444m) in longitude and latitude of the station 
+                (in the 2020 calendar year)</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="comment"> <strong>Data source:</strong> 
+          <a href="https://data.cityofchicago.org/Public-Safety/Crimes-2020/qzdf-xmn8" target="_blank">Chicago Data Portal (Crimes 2020)</a></p>
+      </div>
+
+      <!-- Figure P2  -->
+      <p class="author">Figure P2: histograms of variables in Group 2 hypotheses</p>
+      <img id="full" src="../img/projects/divvy/p2.png">
+
+    </div> <!-- H2 ends -->
+
+
+
+    <div class="tab-pane fade" id="pills-s3" role="tabpanel" aria-labelledby="pills-s3-tab">
+      <h2 class='observations'>Hypotheses Group 3: local supply and demand</h2>
+      <p class="comment">The project assumes that the local divvy bike station density and 
+        population density represent the supply and demand of each bike station. 
+        Having a large supply of bike stations means that each bike station is used 
+        less frequently. Having a large demand for divvy bikes means that each station 
+        is used more often. Here are the hypotheses: 
+        <ul class="comment">
+          <li>H3a: High bike station density is negatively associated with the 
+            usage volume of each station. </li>
+          <li>H3b: High population density is positively associated with the 
+            usage volume of each station. </li>
+        </ul>
+      </p>
+
+      <p class="comment">
+        Table P3 shows the two variables that are collected. “num_bike_stations” 
+        is measured by counting the number of other divvy bike stations within 0.008 
+        degrees (888m) in the longitude and latitude of the station. “population_density” 
+        measures the population density of the zipcode where the station is located. 
+        It is accessed via 
+        <a href="https://pypi.org/project/uszipcode/" target="_blank">the “uszipcode” python package</a>, which sourced data from 
+        the US Census 2010. Figure P3 shows the distribution of bike stations by the 
+        two variables.
+      </p>
+
+      <!-- Table P3  -->
+      <div class="table-responsive">
+        <p class="author"> Table P3: variables for Group 3 hypotheses</p>
+        <table class="table col-lg-12">
+          <thead>
+            <tr>
+              <th scope="col">Variables</th>
+              <th scope="col">Meaning</th>
+              <th scope="col">Data source</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">num_bike_stations</th>
+              <td>the number of other divvy bike stations within 0.008 degrees (888m) 
+                in longitude and latitude of the station (April 2021)</td>
+              <td> <a href="https://www.divvybikes.com/system-data" target="_blank">Divvy historical trip data (April 2021)</a></td>
+            </tr>
+            <tr>
+              <th scope="row">population_density</th>
+              <td>the population density of the zipcode where the station is 
+                located (2010 Census data)</td>
+                <td> <a href="https://pypi.org/project/uszipcode" target="_blank">uszipcode python package</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Figure P3  -->
+      <p class="author">Figure P3: histograms of variables in Group 3 hypotheses</p>
+      <img id="full" src="../img/projects/divvy/p3.png">
+    </div>
+
+
+    <div class="tab-pane fade" id="pills-s4" role="tabpanel" aria-labelledby="pills-s4-tab">
+      <h2 class='observations'>Hypotheses Group 4: other public transportations</h2>
+      <p class="comment">Chicago has 144 CTA rail stations (as of December 2018) and 10847 
+        bus stops (as of November 2020). These alternative public transportation 
+        facilities may have complex associations with bike stations’ usage volume. 
+        After controlling for population density, I suspect that there are two conflicting 
+        effects: (1) substitution effect. It is likely that bus, rail, and public bike 
+        shares serve similar purposes and compete with each other for passengers. 
+        Therefore, having many bus stops or rail stations nearby reduces the popularity 
+        of a bike station. (2) Complement effect. It is likely that public bike shares 
+        are used for shorter distance travel than bus or rail systems. Therefore, 
+        passengers may use bike share service often before or after commuting by bus 
+        or rail. For this reason, having many bus stops nearby or close to rail stations 
+        may increase the popularity of the bike stations. I hypothesize that the 
+        complement effect plays a strong role: 
+        <ul class="comment">
+          <li>H4: A large number of nearby bus stops or close proximity to a rail 
+            station is associated with a high usage volume of the divvy bike station. </li>
+        </ul>
+      </p>
+
+      <p class="comment">
+        Table P4 lists the two variables of interest. “min_dis_rail_station” measures the 
+        euclidean distance between the bike station and the nearest CTA rail station. 
+        “num_bus_stop” counts the number of bus stops within 0.002 degrees (200m) in 
+        both the longitude and latitude from the bike station. Both CTA 
+        <a href="https://data.cityofchicago.org/Transportation/CTA-L-Rail-Stations-kml/4qtv-9w43" target="_blank">rail stations</a> and 
+        <a href="https://data.cityofchicago.org/Transportation/CTA-Bus-Stops-kml/84eu-buny" target="_blank">bus stops</a>  
+        data were collected from the City of Chicago Data Portal. Figure P4 shows the 
+        distribution of stations by these two variables.
+      </p>
+
+      <!-- Table P4  -->
+      <div class="table-responsive">
+        <p class="author"> Table P4: variables for Group 4 hypotheses</p>
+        <table class="table col-lg-12">
+          <thead>
+            <tr>
+              <th scope="col">Variables</th>
+              <th scope="col">Meaning</th>
+              <th scope="col">Data source</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">min_dis_rail_station</th>
+              <td>the Euclidean distance (in decimal degrees) between the bike station and the nearest CTA 
+                rail station (data updated on December 31 2018)</td>
+              <td> <a href="https://data.cityofchicago.org/Transportation/CTA-L-Rail-Stations-kml/4qtv-9w43" target="_blank">Chicago Data Portal (CTA - 'L' (Rail) Stations)</a></td>
+            </tr>
+            <tr>
+              <th scope="row">num_bus_stop</th>
+              <td>the number of bus stops within 0.002 degrees (222m) in longitude and 
+                latitude of the bike station (data updated on November 9th 2020) </td>
+                <td> <a href="https://data.cityofchicago.org/Transportation/CTA-Bus-Stops-kml/84eu-buny" target="_blank">Chicago Data Portal (CTA - Bus Stops)</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <!-- Figure P4  -->
+      <p class="author">Figure P4: histograms of variables in Group 4 hypotheses</p>
+      <img id="full" src="../img/projects/divvy/p4.png">
+    </div>
+
+    <div class="tab-pane fade" id="pills-s5" role="tabpanel" aria-labelledby="pills-s5-tab">
+      <h2 class='observations'>Hypotheses Group 5: socio-economic status</h2>
+      <p class="comment">This project suspects that the divvy bike share service is mainly 
+        used by the middle class. It is because the residents in disadvantaged 
+        neighborhoods may not feel comfortable paying for public bike rides. Meanwhile, 
+        the wealthy upper-class population may prefer their own personal bikes or 
+        vehicles rather than public bikes. Therefore, I hypothesize an inverse “U” 
+        shaped curve for the relationship between socio-economic status and usage volume:
+        <ul class="comment">
+          <li>H5: As the average home value of a neighborhood increases, the usage 
+            volume of bike stations in the neighborhood first increases, then decreases. </li>
+        </ul>
+      </p>
+
+      <p class="comment">
+        Table P5 shows the variable, “average_home_value”, which measures the average 
+        home value of the zipcode where bike stations are located. The variable is 
+        collected from 
+        <a href="https://www.zillow.com/research/data/" target="_blank">Zillow Housing data</a> 
+        recorded on April 30th, 2021. Figure P5 
+        shows the distribution of stations by home value.
+      </p>
+
+      <!-- Table P5  -->
+      <div class="table-responsive">
+        <p class="author"> Table P5: the variable for Group 5 hypothesis</p>
+        <table class="table col-lg-12">
+          <thead>
+            <tr>
+              <th scope="col">Variable</th>
+              <th scope="col">Meaning</th>
+              <th scope="col">Data source</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">average_home_value</th>
+              <td>the average home value (SFR, Condo/Co-op) 
+                of the zipcode where the station is located (April 30th, 2021)</td>
+              <td><a href="https://www.zillow.com/research/data" target="_blank">Zillow Housing data (home value index)</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Figure P5  -->
+      <p class="author">Figure P5: histogram of the variable in Group 5 hypothesis</p>
+      <img id="full" src="../img/projects/divvy/p5.png">
+    </div>
+
+
+
+    <div class="tab-pane fade" id="pills-s6" role="tabpanel" aria-labelledby="pills-s6-tab">
+      <h2 class='observations'>Hypotheses Group 6: demographics</h2>
+      <p class="comment">It is likely that the preference of using the public bike 
+        share system differs by race and age group. I hypothesize that:
+
+        <ul class="comment">
+          <li>H6a: The racial composition of the region affects the usage volume 
+            of the bike station located in the region.</li>
+          <li>H6b: A larger proportion of young people in the region is positively 
+            associated with the usage volume of the bike stations located in the region.</li>
+        </ul>
+      </p>
+
+      <p class="comment">
+        Table P6 shows the demographic variables collected from 
+        <a href="https://data.cityofchicago.org/Health-Human-Services/Chicago-Population-Counts/85cm-7uqa" target="_blank">the City of Chicago Data 
+          Portal</a> (recorded in 2019). Figure P6 shows the distribution of bike stations by 
+        these regional demographics variables.
+      </p>
+
+      <!-- Table P6  -->
+      <div class="table-responsive">
+        <p class="author"> Table P6: variables for Group 6 hypotheses</p>
+        
+        <table class="table col-lg-12">
+          <thead>
+            <tr>
+              <th scope="col">Variables</th>
+              <th scope="col">Meaning</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">black_p</th>
+              <td>the percentage of population 
+                that self-identified as black in the zipcode of the station</td>
+              
+            </tr>
+            <tr>
+              <th scope="row">asian_p</th>
+              <td>the percentage of population that self-identified 
+                as asian in the zipcode of the station</td>
+            </tr>
+            <tr>
+              <th scope="row">latinx_p</th>
+              <td>the percentage of population that self-identified 
+                as latinx in the zipcode of the station</td>
+            </tr>
+            <tr>
+              <th scope="row">white_p</th>
+              <td>the percentage of population that self-identified 
+                as white in the zipcode of the station</td>
+            </tr>
+            <tr>
+              <th scope="row">age18_29_p</th>
+              <td>the percentage of population with age between 18 and 29 
+                in the zipcode of the station</td>
+            </tr>
+            <tr>
+              <th scope="row">age30_39_p</th>
+              <td>the percentage of population with age between 30 and 39 
+                in the zipcode of the station</td>
+            </tr>
+            <tr>
+              <th scope="row">age40_49_p</th>
+              <td>the percentage of population with age between 40 and 49 
+                in the zipcode of the station</td>
+            </tr>
+            <tr>
+              <th scope="row">age50_59_p</th>
+              <td>the percentage of population with age between 50 and 59 
+                in the zipcode of the station</td>
+            </tr>
+            <tr>
+              <th scope="row">age65_p</th>
+              <td>the percentage of population with age greater than 65 
+                in the zipcode of the station</td>
+            </tr>
+          </tbody>    
+        </table>
+        <p class="comment"> <strong>Data source:</strong> 
+          <a href="https://data.cityofchicago.org/Health-Human-Services/Chicago-Population-Counts/85cm-7uqa" target="_blank">Chicago Data Portal (Chicago Population Counts) (2019)</a></p>
+      </div>
+
+      <!-- Figure P6  -->
+      <p class="author">Figure P6: histograms of variables in Group 6 hypotheses</p>
+      <img id="full" src="../img/projects/divvy/p6.png">
+    </div>
+    
+  </div> <!--pills ends-->
+
+  <hr>
+  <p class="comment">Table P7 shows the summary table of all variables. 
+    Figure P7 shows the correlation heatmap. Here are a few observations from the heatmap: 
+    (1) the number of bike stations nearby is highly correlated with the 
+    number of white collar crimes nearby. It suggests that places with 
+    high numbers in both categories are likely to be downtown Chicago. 
+    These two variables are positively correlated with the outcome variable 
+    (total_count). (2) the proportion of the white population is highly 
+    correlated with the proportion of young people (age 18-39) in an area. 
+    These variables are also positively correlated with the outcome variable.</p>
+    
+    <!-- Table P7 summary table  -->
+    <div class="table-responsive">
+      <p class="author"> Table P7: summary table of all variables</p>
+      
+      <table class="table col-lg-12">
+        <thead>
+          <tr>
+            <th scope="col">Variables</th>
+            <th scope="col">count</th>
+            <th scope="col">mean</th>
+            <th scope="col">std</th>
+            <th scope="col">min</th>
+            <th scope="col">25%</th>
+            <th scope="col">50%</th>
+            <th scope="col">75%</th>
+            <th scope="col">max</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">total_count</th>
+            <td>681</td>
+            <td>875.8</td>
+            <td>1,084.9</td>
+            <td>1</td>
+            <td>62</td>
+            <td>431</td>
+            <td>1,335</td>
+            <td>7,109</td>
+          </tr>
+          <tr>
+            <th scope="row">casual_p</th>
+            <td>681</td>
+            <td>0.48</td>
+            <td>0.22</td>
+            <td>0.00</td>
+            <td>0.32</td>
+            <td>0.40</td>
+            <td>0.58</td>
+            <td>1.00</td>
+          </tr>
+          <tr>
+            <th scope="row">average_distance</th>
+            <td>681</td>
+            <td>0.024</td>
+            <td>0.008</td>
+            <td>0.000</td>
+            <td>0.019</td>
+            <td>0.023</td>
+            <td>0.027</td>
+            <td>0.068</td>
+          </tr>
+          <tr>
+            <th scope="row">weekday_p</th>
+            <td>681</td>
+            <td>0.70</td>
+            <td>0.11</td>
+            <td>0.00</td>
+            <td>0.65</td>
+            <td>0.70</td>
+            <td>0.75</td>
+            <td>1.00</td>
+          </tr>
+          <tr>
+            <th scope="row">morning_p</th>
+            <td>681</td>
+            <td>0.21</td>
+            <td>0.09</td>
+            <td>0.00</td>
+            <td>0.17</td>
+            <td>0.21</td>
+            <td>0.25</td>
+            <td>1.00</td>
+          </tr>
+          <tr>
+            <th scope="row">evening_p</th>
+            <td>681</td>
+            <td>0.12</td>
+            <td>0.09</td>
+            <td>0.00</td>
+            <td>0.07</td>
+            <td>0.10</td>
+            <td>0.14</td>
+            <td>1.00</td>
+          </tr>
+          <tr>
+            <th scope="row">num_phys_crime</th>
+            <td>681</td>
+            <td>17.6</td>
+            <td>13.5</td>
+            <td>0</td>
+            <td>8</td>
+            <td>15</td>
+            <td>24</td>
+            <td>75</td>
+          </tr>
+          <tr>
+            <th scope="row">num_wc_crime</th>
+            <td>681</td>
+            <td>35.2</td>
+            <td>35.1</td>
+            <td>0</td>
+            <td>15</td>
+            <td>26</td>
+            <td>41</td>
+            <td>223</td>
+          </tr>
+          <tr>
+            <th scope="row">num_bike_stations</th>
+            <td>681</td>
+            <td>7.3</td>
+            <td>7.3</td>
+            <td>0</td>
+            <td>2</td>
+            <td>5</td>
+            <td>10</td>
+            <td>35</td>
+          </tr>
+          <tr>
+            <th scope="row">population_density</th>
+            <td>681</td>
+            <td>16,949</td>
+            <td>7,998</td>
+            <td>1,259</td>
+            <td>10,459</td>
+            <td>15,920</td>
+            <td>21,570</td>
+            <td>35,505</td>
+          </tr>
+          <tr>
+            <th scope="row">min_dis_rail_station</th>
+            <td>681</td>
+            <td>0.012</td>
+            <td>0.016</td>
+            <td>0.000</td>
+            <td>0.003</td>
+            <td>0.007</td>
+            <td>0.014</td>
+            <td>0.110</td>
+          </tr>
+          <tr>
+            <th scope="row">num_bus_stop</th>
+            <td>681</td>
+            <td>5.1</td>
+            <td>3.5</td>
+            <td>0</td>
+            <td>2</td>
+            <td>5</td>
+            <td>7</td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <th scope="row">average_home_value</th>
+            <td>662</td>
+            <td>368,676</td>
+            <td>150,505</td>
+            <td>86,191</td>
+            <td>219,731</td>
+            <td>379,250</td>
+            <td>503,115</td>
+            <td>662,782</td>
+          </tr>
+          <tr>
+            <th scope="row">black_p</th>
+            <td>664</td>
+            <td>0.30</td>
+            <td>0.33</td>
+            <td>0.01</td>
+            <td>0.05</td>
+            <td>0.15</td>
+            <td>0.56</td>
+            <td>0.95</td>
+          </tr>
+          <tr>
+            <th scope="row">asian_p</th>
+            <td>664</td>
+            <td>0.10</td>
+            <td>0.10</td>
+            <td>0.00</td>
+            <td>0.03</td>
+            <td>0.07</td>
+            <td>0.14</td>
+            <td>0.39</td>
+          </tr>
+          <tr>
+            <th scope="row">latinx_p</th>
+            <td>664</td>
+            <td>0.15</td>
+            <td>0.16</td>
+            <td>0.01</td>
+            <td>0.06</td>
+            <td>0.08</td>
+            <td>0.18</td>
+            <td>0.83</td>
+          </tr>
+          <tr>
+            <th scope="row">white_p</th>
+            <td>664</td>
+            <td>0.42</td>
+            <td>0.27</td>
+            <td>0.01</td>
+            <td>0.15</td>
+            <td>0.46</td>
+            <td>0.64</td>
+            <td>0.82</td>
+          </tr>
+          <tr>
+            <th scope="row">age18_29_p</th>
+            <td>664</td>
+            <td>0.25</td>
+            <td>0.08</td>
+            <td>0.12</td>
+            <td>0.18</td>
+            <td>0.24</td>
+            <td>0.30</td>
+            <td>0.47</td>
+          </tr>
+          <tr>
+            <th scope="row">age30_39_p</th>
+            <td>664</td>
+            <td>0.20</td>
+            <td>0.08</td>
+            <td>0.11</td>
+            <td>0.14</td>
+            <td>0.20</td>
+            <td>0.24</td>
+            <td>0.46</td>
+          </tr>
+          <tr>
+            <th scope="row">age40_49_p</th>
+            <td>664</td>
+            <td>0.12</td>
+            <td>0.02</td>
+            <td>0.07</td>
+            <td>0.11</td>
+            <td>0.12</td>
+            <td>0.13</td>
+            <td>0.16</td>
+          </tr>
+          <tr>
+            <th scope="row">age50_59_p</th>
+            <td>664</td>
+            <td>0.11</td>
+            <td>0.03</td>
+            <td>0.06</td>
+            <td>0.08</td>
+            <td>0.11</td>
+            <td>0.12</td>
+            <td>0.17</td>
+          </tr>
+          <tr>
+            <th scope="row">age65_p</th>
+            <td>664</td>
+            <td>0.11</td>
+            <td>0.04</td>
+            <td>0.01</td>
+            <td>0.08</td>
+            <td>0.11</td>
+            <td>0.14</td>
+            <td>0.21</td>
+          </tr>
+
+        </tbody>    
+      </table>
+      <p class="comment"> <strong>Data source:</strong> 
+        <a href="https://data.cityofchicago.org/Health-Human-Services/Chicago-Population-Counts/85cm-7uqa" target="_blank">Chicago Data Portal (Chicago Population Counts) (2019)</a></p>
+    </div>
+
+
+
+    <!-- Figure P7 correlation heatmap  -->
+    <p class="author">Figure P7: variable correlation heatmap</p>
+        <img id="full" src="../img/projects/divvy/p7.png">
+
+
+  <p class="title2">Results</p>
+
+  <p class="comment">To ensure interpretability, the project employs multivariate 
+    OLS regression models to test the hypotheses. Because the distributions of 
+    most variables are highly skewed, log transformation is applied on all variables 
+    for consistent interpretation, including the outcome variable. Table P8 shows 
+    the results of the two regression models. Model (1) contains all variables 
+    discussed in the six hypotheses. Model (2) represents the final model that 
+    only includes variables with statistically significant associations (p &#60; 0.1) 
+    to the outcome. Both models have adjusted R-squared values of about 0.75, which 
+    means that the predictor variables in the models explained about 75% of the 
+    variations in divvy bike station volume usage.</p>
+
+    <!-- Table/Figure P8 -->
+    <p class="author">Figure P8: OLS regression results</p>
+    <img id="full" src="../img/projects/divvy/p8.png">
+
+
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="pills-r1-tab" data-toggle="pill" href="#pills-r1" role="tab" aria-controls="pills-r1" aria-selected="true">Location and purpose</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="pills-r2-tab" data-toggle="pill" href="#pills-r2" role="tab" aria-controls="pills-r2" aria-selected="false">Crime rates</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="pills-r3-tab" data-toggle="pill" href="#pills-r3" role="tab" aria-controls="pills-r3" aria-selected="false">Local supply and demand</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="pills-r4-tab" data-toggle="pill" href="#pills-r4" role="tab" aria-controls="pills-r4" aria-selected="false">Public transportations</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="pills-r5-tab" data-toggle="pill" href="#pills-r5" role="tab" aria-controls="pills-r5" aria-selected="false">Socio-economic status</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="pills-r6-tab" data-toggle="pill" href="#pills-r6" role="tab" aria-controls="pills-r6" aria-selected="false">Demographics</a>
+      </li>
+    </ul>
+  
+  
+    <div class="tab-content comment" id="pills-tabContent">
+      <div class="tab-pane show fade active" id="pills-r1" role="tabpanel" aria-labelledby="pills-r1-tab">
+        <h2 class='observations'>Results for hypotheses Group 1: location and purpose</h2>
+        <p class="comment">The result from model (1) provides no support for hypothesis H1a. 
+          It provides support for H1b, and suggests an opposite effect for H1c. </p>
+
+          <p class="comment">
+          The coefficient for log(casual_p) is not statistically significant (p&#62;0.1). It means
+          that <strong>the results cannot identify clear associations between proportion of casual riders
+          and station usage volume, controlling for other factors</strong>. 
+          There are three possible explanations: (a) high one-time payment percentage does not 
+          suggest that the station is located at tourist attractions, (b) locating at tourist 
+          sites does not lead to high volume of bike usage, (c) because the data is recorded 
+          during the covid-19 pandemic (April 2021), tourist sites did not attract as much 
+          visitors as pre-pandemic times.
+        </p>
+  
+        <p class="comment">
+          The coefficient for log(average_distance) is -0.24 and statistically significant (p&#60;0.01). 
+          It means that, <strong>controlling for other factors, a 1 percent increase in the average 
+          distance of trips that use the station (in the divvy bike station distribution) is 
+          associated with a 0.24% reduction in station usage volume</strong>.
+        </p>
+
+        <p class="comment">
+          <strong>Controlling for other factors, a 1 percent increase in weekday usage (in the divvy bike 
+          station distribution) is associated with a 0.35% increase in station usage volume, 
+          and a 1 percent increase in morning usage (in the divvy bike station distribution) 
+          is associated with a 0.17% increase in station usage volume (p&#60;0.01)</strong>. These 
+          results suggest an opposite effect from what we hypothesized in H1c. A possible 
+          explanation is that stations mainly used for commute or daily errands are associated 
+          with a higher volume of usage.
+        </p>
+
+
+        <p class="comment">
+          Furthermore, <strong>a one percent increase in the evening (9pm to 6am) usage 
+          (in the divvy bike station distribution) is linked with a 0.08% increase in station 
+          usage volume (p&#60;0.01)</strong>. It may be because stations that are used often in the 
+          evening are located in areas with good lighting, most likely in geographically 
+          important locations.
+        </p>
+  
+      </div> <!-- H1 ends -->
+  
+  
+  
+      <div class="tab-pane fade" id="pills-r2" role="tabpanel" aria-labelledby="pills-r2-tab">
+        <h2 class='observations'>Results for Hypotheses Group 2: crime rates</h2>
+
+        <p class="comment">
+          The results in model (1) provide strong support for H2a and H2b. <strong>Controlling 
+          for other factors, a one percent increase in physical crime cases nearby (in 
+          the divvy bike station distribution) is associated with a 0.14% reduction in 
+          station volume. A one percent increase in white collar crime cases nearby is 
+          associated with a 0.15% increase in station volume (p&#60;0.01)</strong>.
+        </p>
+  
+      </div> <!-- H2 ends -->
+  
+  
+  
+      <div class="tab-pane fade" id="pills-r3" role="tabpanel" aria-labelledby="pills-r3-tab">
+        <h2 class='observations'>Results for Hypotheses Group 3: local supply and demand</h2>
+        
+        <p class="comment">
+          Results in model (1) provide support for H3b and suggest an opposite effect to H3a. 
+          <strong>Controlling for other factors, a one percent increase in population density of 
+          the zipcode in which the station is located is linked to a 0.36% increase in bike 
+          station volume (p&#60;0.01). Meanwhile, a one percent increase in the number of 
+          other divvy bike stations nearby is also associated with a 0.04% increase in bike 
+          station volume (p&#60;0.1).</strong> Network effect may be an explanation for the positive 
+          link between the number of other divvy bike stations nearby and bike station 
+          volume: having more bike stations nearby makes it more convenient for riders to 
+          use divvy bikes for short distance trips. The network effect also explains H1b, 
+          where stations with high average trips, which signals that they are far away from 
+          other stations (absence of network effect), are associated with low usage volume.
+        </p>
+      </div>
+  
+      <div class="tab-pane fade" id="pills-r4" role="tabpanel" aria-labelledby="pills-r4-tab">
+        <h2 class='observations'>Results for Hypotheses Group 4: other public transportations</h2>
+        <p class="comment">
+          Results in the model (1) do not support H4a. <strong>Controlling for other factors, including 
+          population density, having rail stations or bus stops nearby are not linked to the 
+          popularity of bike stations (p&#62;0.1)</strong>. It may be because the complement and 
+          substitutes effects cancel out each other. Further investigation is needed to 
+          understand how and where these interactions took place.
+        </p>
+      </div>
+  
+      <div class="tab-pane fade" id="pills-r5" role="tabpanel" aria-labelledby="pills-r5-tab">
+        <h2 class='observations'>Results for Hypotheses Group 5: socio-economic status</h2>
+  
+        <p class="comment">
+          Results in model (1) show an opposite effect from H5. H5 expects an inverse U 
+          shape curve, which suggests that the stations in the middle class zip code 
+          areas are used more often than stations in wealthy or disadvantaged zip code 
+          areas. To my astonishment, <strong>the result suggests a U shape curve instead: as 
+          the average home value in a zip code area increases, the usage volume of bike 
+          stations first decreases, then increases (p&#60;0.05) (see Figure P8)</strong>. 
+          So far, I am unable to come up with a convincing explanation.
+        </p>
+  
+        <!-- Figure P8  -->
+      </div>
+  
+  
+      <div class="tab-pane fade" id="pills-r6" role="tabpanel" aria-labelledby="pills-r6-tab">
+        <h2 class='observations'>Results for Hypotheses Group 6: demographics</h2>
+  
+        <p class="comment">
+          Results in model (1) support both H6a and H6b. <strong>The preference of using public 
+          bike share varies by racial composition of the area.</strong> Controlling for other 
+          factors, a one percent increase in the proportion of asian population in the 
+          zip code area where the bike station is located (in the divvy bike station 
+          distribution) is associated with a 0.1% increase in bike station usage 
+          volume (p&#60;0.05). A one percent increase in the proportion of latinx 
+          population is associated with a 0.17% decrease in usage volume (p&#60;0.01). 
+          A one percent increase in the proportion of white population is associated 
+          with a 0.35% increase in usage volume (p&#60;0.01). Changes in the proportion 
+          of black population are not associated with bike station usage volume (p&#62;0.1).
+        </p>
+
+        <p class="comment">
+          <strong>Having a greater proportion of young people in an area also increases public 
+          bike share usage.</strong> Controlling for other factors, a one percent increase in 
+          the proportion of population between 18 and 29 in the zip code area where 
+          the bike station is located (in the divvy bike station distribution) is 
+          associated with a 0.88% increase in bike station usage volume (p&#60;0.01). 
+          A one percent increase in the proportion of population between 30 and 39 is 
+          linked to a 1.64% increase in bike station usage volume (p&#60;0.01).
+        </p>
+      </div>
+  
+    </div> <!--pills ends-->
+
+    <hr>
+    <p class="comment">
+      Table P9 summarizes the testing results of the 6 hypotheses groups.
+    </p>
+
+    <!--Table P9-->
+    <div class="table-responsive">
+      <p class="author"> Table P9: summary of the hypothesis testing results</p>
+      
+      <table class="table col-lg-12">
+        <thead>
+          <tr>
+            <th scope="col">Hypotheses</th>
+            <th scope="col">variables (in log scale)</th>
+            <th scope="col">hypothesized association with 
+              station usage volume</th>
+            <th scope="col">whether supported by regression results</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">H1a</th>
+            <td>proportion of casual riders (one time payment)</td>
+            <td>positive</td>
+            <td>No</td> 
+          </tr>
+          <tr>
+            <th scope="row">H1b</th>
+            <td>average trip distance</td>
+            <td>negative</td>
+            <td>Yes</td> 
+          </tr>
+          <tr>
+            <th scope="row">H1c</th>
+            <td>proportion of weekday or morning trips</td>
+            <td>negative</td>
+            <td>Opposite (positive)</td> 
+          </tr>
+          <tr>
+            <th scope="row">H2a</th>
+            <td>number of physical crime cases nearby</td>
+            <td>negative</td>
+            <td>Yes</td> 
+          </tr>
+          <tr>
+            <th scope="row">H2b</th>
+            <td>number of white collar crime cases nearby</td>
+            <td>positive</td>
+            <td>Yes</td> 
+          </tr>
+          <tr>
+            <th scope="row">H3a</th>
+            <td>number of divvy bike stations nearby</td>
+            <td>negative</td>
+            <td>Opposite (positive)</td> 
+          </tr>
+          <tr>
+            <th scope="row">H3b</th>
+            <td>population density nearby</td>
+            <td>positive</td>
+            <td>Yes</td> 
+          </tr>
+          <tr>
+            <th scope="row">H4</th>
+            <td>distance to the nearest rail station, 
+              number of bus stops nearby</td>
+            <td>positive</td>
+            <td>No</td> 
+          </tr>
+          <tr>
+            <th scope="row">H5</th>
+            <td>average home value nearby</td>
+            <td>inverse U shaped curve</td>
+            <td>Opposite (U shaped curve)</td> 
+          </tr>
+          <tr>
+            <th scope="row">H6a</th>
+            <td>racial compositions of population nearby</td>
+            <td>exist association</td>
+            <td>Yes (positive for asian and white, 
+              negative for latinx, no association for black)</td> 
+          </tr>
+          <tr>
+            <th scope="row">H6b</th>
+            <td>proportion of young people nearby</td>
+            <td>positive</td>
+            <td>Yes</td> 
+          </tr>
+        </tbody>    
+      </table>
+    </div>
+
+  
+    
+  <h3 class="titleb"> 
+    <a href="#uchicago">[Back to Top]</a>
+    <span><a href="mailto: wzhu4@uchicago.edu">[Email me Comments]</a></span>
+    <a href="projects.html">[Back to Projects]</a>
+    </h3>
+
+
+
+
+    </div><!--bookinfo ends-->
+  </div><!--book end-->
+</div> <!-- column ends -->
+
+
+
+
+  
+    </div> <!-- row ends -->
+
+  </div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+body{
+	background-color: #FAFFFA;;
+	font-family: Optima;
+}
+
+header{
+	height: 8%;
+	padding-top: 2%;
+}
+
+#uchicago{
+	width: 105px;
+}
+
+
+#myname{
+	text-align: right;
+}
+
+#pdf{
+  padding: 5% 0;
+
+}
+
+
+.social-icons {
+  text-align: right;
+  margin-bottom: 0px;
+  }  
+.social-icons li {
+  display:inline-block;
+  list-style-type:none;
+  }
+.social-icons li a {
+  border-bottom: none;
+  }
+.social-icons li img {
+  width:30px;
+  height:30px;
+  margin-top: 3px;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+
+hr {
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+
+.navbar{
+	padding-top: 0px;
+}
+
+
+.navbar-light{
+	font-size: 22px;
+}
+
+.navbar-nav > li{
+  margin-right:80px;
+}
+
+
+p{
+	font-size: 23px;
+}
+
+
+.titleb{
+  padding-top: 6%;
+  padding-bottom: 0%;
+  text-align: center;
+}
+
+img{
+  width: 50%;
+}
+
+/* ------------- */
+
+
+
+
+.book{
+  margin:5% 0;
+  /* height:600px; */
+  max-width:1100px;
+
+    /*flex-basis: 30%;*/
+  display: flex;
+  flex-flow: column;
+    /* flex-wrap: nowrap; */
+    /* flex-flow: column warp; */
+    /* overflow: hidden; */
+   /* margin-bottom: 5%;*/
+  border-radius: 1%;
+  background:rgb(246, 246, 246);
+}
+/* .bookpic{
+    order: -1;
+    align-self: center;
+    max-width: 800px; 
+    background-size: cover; 
+    /* background-position: 50% 50%; 
+}*/
+
+.book img{
+    width: 100%;
+     order: -1;
+    align-self: center;
+}
+
+.h_iframe {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top:   56.25%;
+}
+
+.h_iframe iframe {
+  position: absolute;
+  top:      0;
+  left:     0;
+  bottom:   0;
+  right:    0;
+  width:    100%;
+  height:   100%;
+}
+
+
+
+.bookinfo{
+    max-width: 1100px;
+    padding: 2% 2%;
+
+}
+
+.bookinfo .title{
+    text-align: left;
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    color: #5a5a5a;
+    font-weight: 600;
+}
+
+.bookinfo .title2{
+    text-align: left;
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-top: 20%;
+    margin-bottom: 1%;
+    color: #5a5a5a;
+    font-weight: 600;
+}
+
+.bookinfo .author{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.bookinfo #small{
+  width: 46%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.bookinfo #small2{
+  width: 46%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+
+.bookinfo #small3{
+  width: 52%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 1%;
+  margin-right: 0%;
+}
+
+.bookinfo #full{
+  width: 100%;
+  margin-left: 0%;
+  margin-top: 0%;
+  margin-bottom: 3%;
+}
+
+
+
+.book{
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+}
+/* controls */
+/*.bookinfo{
+    position: relative;
+}
+*/
+
+.comment{
+  padding-top: 1%;
+  font-size: 1.5rem;
+}
+
+.bookinfo .table{
+  font-size: 1.4rem;
+  margin-top: 3%;
+  margin-bottom: 0%;
+}
+
+
+.bookinfo .note{
+  font-size: 1.3rem;
+}
+
+
+.bookinfo .nav-pills{
+  margin-top: 5%;
+}
+
+.bookinfo .nav-item{
+  font-size: 2rem;
+  color: black;
+  margin-right: 4%;
+  text-decoration: underline;
+  text-decoration-thickness: 6%;
+  
+}
+.bookinfo .nav-pills .active {
+  background-color: #a6e5fc;
+  color: black;
+}
+
+.bookinfo .tab-pane>ul>li{
+  line-height: 200%;
+  font-size: 1.6rem;
+}
+
+.nav-pills>li>a {
+  color: black;
+}
+
+.form-group{
+  align-items: center;
+  margin-left: 20%;
+  font-size: 1.5rem;
+}
+
+.form-group .form-control{
+  font-size: 1.5rem;
+}
+
+.bookinfo .observations{
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: 1;
+  margin-top: 3%;
+  margin-bottom: 1%;
+  color:black;
+  font-weight: 600;
+}
+
+span {
+  margin-left: 10%;
+  margin-right: 8%;
+}
+
+.tab-content{
+  margin-bottom: 8%;
+}
