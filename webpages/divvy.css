@@ -181,16 +181,16 @@ img{
 }
 
 .bookinfo #small3{
-  width: 52%;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  margin-left: 1%;
+  width: 80%;
+  margin-top: 0%;
+  margin-bottom: 3%;
+  margin-left: 10%;
   margin-right: 0%;
 }
 
 .bookinfo #full{
-  width: 100%;
-  margin-left: 0%;
+  width: 94%;
+  margin-left: 3%;
   margin-top: 0%;
   margin-bottom: 3%;
 }
