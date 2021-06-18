@@ -22,7 +22,8 @@ header{
 }
 
 #pdf{
-  padding: 5% 0;
+  padding-top: 1%;
+  padding-bottom: 5%;
 
 }
 
@@ -34,8 +35,6 @@ header{
 .social-icons li {
   display:inline-block;
   list-style-type:none;
-  -webkit-user-select:none;
-  -moz-user-select:none;
   }
 .social-icons li a {
   border-bottom: none;
@@ -72,6 +71,12 @@ hr {
 
 p{
 	font-size: 23px;
+}
+
+#download{
+  font-size: 2rem;
+  margin-top: 5%;
+  text-align: center;
 }
 
 .intro{
