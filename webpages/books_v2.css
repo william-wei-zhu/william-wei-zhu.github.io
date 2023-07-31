@@ -1,0 +1,223 @@
+body{
+	background-color: #FAFFFA;
+	font-family: Optima;
+}
+
+header{
+	height: 8%;
+	padding-top: 2%;
+}
+
+#uchicago{
+	width: 100%;
+}
+
+h1{font-family: Optima;
+   font-size: 40px;
+   margin-top: 0;
+   margin-bottom: 1%;
+}
+h4{font-family: Optima;
+   font-size: 24px;
+   margin-top: 0;
+   margin-bottom: 1%;}
+
+#myname{
+	text-align: right;
+}
+
+
+.social-icons {
+  text-align: right;
+  margin-bottom: 0px;
+  }  
+.social-icons li {
+  display:inline-block;
+  list-style-type:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  }
+.social-icons li a {
+  border-bottom: none;
+  }
+  .social-icons li img {
+    width:30px;
+    height:30px;
+    margin-top: 3px;
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+
+
+hr {
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+
+.navbar{
+	padding-top: 0px;
+}
+
+
+.navbar-light{
+	font-size: 22px;
+}
+
+.navbar-nav > li{
+  margin-right:80px;
+}
+
+.titleb{
+  padding-top: 6%;
+  padding-bottom: 3%;
+  text-align: center;
+}
+
+img{
+  width: 50%;
+}
+
+.w3-theme-back {
+  background-color:#FAFFFA; 
+  font-family:Optima;
+  font-size: 18px;
+}
+/* --------------------------- */
+
+
+
+.card{
+  margin-left: 9%;
+  margin-right: 0;
+  margin-bottom: 8%;
+  /* height:1000px; */
+  max-width:1600px;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+  background:rgb(246, 246, 246);
+  flex-direction: column;
+}
+
+.book{
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 2%;
+  /* height:450px; */
+  /* max-width:1600px; */
+
+    /* flex-basis: 30%; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* overflow: hidden; */
+   /* margin-bottom: 5%;*/
+    border-radius: 1%;
+    box-shadow: 0px 0.5px 0.5px rgba(0,0,0,0.2);
+}
+.bookpic{
+    width: 300px;
+    height:450px;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.book img{
+  width: 100%;
+}
+
+
+.bookinfo{
+    width: 720px;
+    padding: 2% 2%;
+
+}
+.bookinfo .title{
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin-bottom: 3%;
+    color: #5a5a5a;
+    font-weight: 600;
+}
+.bookinfo .author{
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+
+
+.furtherinfo{
+  padding: 1% 1%;
+  margin-left: 2%;
+  margin-right: 2%;
+
+}
+
+.furtherinfo .title{
+  font-size: 1.4rem;
+  line-height: 1.2;
+  margin-bottom: 3%;
+  color: #5a5a5a;
+  font-weight: 600;
+  text-align: center;
+}
+
+.furtherinfo .title2{
+  font-size: 1.6rem;
+  line-height: 1.2;
+  margin-bottom: 1%;
+  color: #5a5a5a;
+  font-weight: 600;
+  text-align: center;
+}
+
+
+.furtherinfo .author{
+  font-size: 1.3rem;
+  font-style: italic;
+  text-align: center;
+}
+
+
+
+
+.furtherbooksbox{
+  margin-left: 2%;
+  margin-right: 1%;
+  margin-bottom: 4%;
+  height:360px;
+  /* max-width:1600px; */
+
+    /* flex-basis: 30%; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* overflow: hidden; */
+   /* margin-bottom: 5%;*/
+    border-radius: 1%;
+    justify-content: center;
+
+}
+
+.book2pic{
+  width: 240px;
+  background-size: cover;
+  background-position: 50% 50%;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.book2pic img{
+width: 100%;
+}
+
+.comment{
+  padding-top: 1%;
+  font-size: 1.3rem;
+}
+.roman{font-size: 1.3rem;}
+
+.intro{
+  padding-left: 14%;
+  padding-right: 4%;
+  font-size: 1.6rem;
+}
