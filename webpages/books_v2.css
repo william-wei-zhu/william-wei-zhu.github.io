@@ -11,6 +11,11 @@ header{
 #uchicago{
 	width: 100%;
 }
+@media screen and (max-width: 768px) {
+  #uchicago {
+    width: 200px;
+  }
+} 
 
 h1{font-family: Optima;
    font-size: 40px;
