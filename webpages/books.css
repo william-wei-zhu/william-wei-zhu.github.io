@@ -86,7 +86,7 @@ img{
 .w3-theme-back {
   background-color:#FAFFFA; 
   font-family:Optima;
-  font-size: 20px;
+  font-size: 19px;
 }
 /* --------------------------- */
 
@@ -150,6 +150,10 @@ img{
     /* width: 720px; */
     /* min-width: 100px; */
     padding: 2% 2%;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 
 }
 .bookinfo .title{
@@ -167,9 +171,12 @@ img{
 
 
 .furtherinfo{
-  padding: 1% 1%;
   margin-left: 2%;
   margin-right: 2%;
+  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-left: 2%;
+  padding-right: 2%;
 
 }
 
