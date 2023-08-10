@@ -102,6 +102,13 @@ img{
   }
 }
 
+.cover_img{
+ width: 94%;
+ text-align: center;
+ margin-top: 10px;
+ margin-bottom: 50px;
+}
+
 
 .card{
   margin-left: 9%;
