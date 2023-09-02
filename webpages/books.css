@@ -111,7 +111,7 @@ img{
 
 
 .card{
-  margin-left: 9%;
+  margin-left: 8%;
   margin-right: 0;
   /* margin-bottom: 8%; */
   margin-bottom: 90px;
@@ -253,14 +253,14 @@ width: 100%;
 .roman{font-size: 1.3rem;}
 
 .intro{
-  padding-left: 10%;
+  padding-left: 8%;
   padding-right: 4%;
   font-size: 1.6rem;
 }
 
 .nav-pills{
   margin-top: 5%;
-  padding-left: 10%;
+  padding-left: 8%;
 }
 
 .nav-item2{
