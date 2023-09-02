@@ -74,7 +74,7 @@ hr {
 }
 
 .titleb{
-  padding-top: 10%;
+  padding-top: 5%;
   padding-bottom: 3%;
   text-align: center;
 }
@@ -253,7 +253,35 @@ width: 100%;
 .roman{font-size: 1.3rem;}
 
 .intro{
-  padding-left: 14%;
+  padding-left: 10%;
   padding-right: 4%;
   font-size: 1.6rem;
+}
+
+.nav-pills{
+  margin-top: 5%;
+  padding-left: 10%;
+}
+
+.nav-item2{
+  font-size: 1.8rem;
+  color: black;
+  margin-right: 4%;
+  text-decoration: underline;
+  text-decoration-thickness: 6%;
+  
+}
+
+.nav-pills .active {
+  background-color: #a6e5fc;
+  color: black;
+}
+
+.tab-pane>ul>li{
+  line-height: 200%;
+  font-size: 1.6rem;
+}
+
+.nav-pills>li>a {
+  color: black;
 }
