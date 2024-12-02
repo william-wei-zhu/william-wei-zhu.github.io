@@ -128,7 +128,7 @@ img{
 
 .bookinfo .title{
     text-align: left;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     line-height: 1.2;
     margin-top: 1%;
     margin-bottom: 1%;
@@ -136,7 +136,7 @@ img{
     font-weight: 600;
 }
 .bookinfo .author{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: left;
     font-style: italic;
 }
@@ -163,6 +163,6 @@ img{
 
 .comment{
   padding-top: 1%;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
