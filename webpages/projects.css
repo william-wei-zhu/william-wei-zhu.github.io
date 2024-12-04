@@ -166,3 +166,23 @@ img{
   font-size: 1.2rem;
 }
 
+.h_iframe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.h_iframe iframe {
+  max-width: 100%;
+  aspect-ratio: 16/9;
+  height: auto;
+}
+
+@media screen and (max-width: 850px) {
+  .h_iframe iframe {
+    width: 90%;
+    height: auto;
+  }
+}
