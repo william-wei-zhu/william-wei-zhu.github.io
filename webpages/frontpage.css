@@ -37,6 +37,7 @@ header{
   list-style-type:none;
   -webkit-user-select:none;
   -moz-user-select:none;
+  user-select:none;
   }
 .social-icons li a {
   border-bottom: none;
@@ -80,6 +81,18 @@ p{
 
 .second{
 	padding-top: 5%;
+	margin-bottom: 0; /* Remove bottom margin from the paragraph */
+}
+
+ul.second, .second li, ul.second li {
+	font-size: 1.2rem; /* Match the paragraph font size */
+	font-family: inherit; /* Inherit the font family */
+	color: inherit; /* Inherit the text color */
+	line-height: inherit; /* Inherit the line height */
+	list-style-position: inside; /* Ensures bullet points align properly */
+	padding-left: 0; /* Remove default padding */
+	margin-top: 0; /* Remove top margin completely */
+	margin-bottom: 0; /* Remove bottom margin */
 }
 
 .word{
